@@ -1,26 +1,30 @@
-import React from 'react'
-import "./header.css"
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { navs } from './Consts'; 
+
+import './header.css';
 
 const Header = () => {
   return (
     <div>
       <header>
         <div className="container">
-            <div className="logo">
+          <div className="logo">
             <img src={require('../../images/logo.png')} alt="Logo" />
-            </div>
+          </div>
             <nav className="nav">
-                <ul>
-                    <li>Home</li>
-                    <li>Portfolio</li>
-                    <li>Gallery</li>
-                    <li>About</li>
-                </ul>
+            {navs.map((item, index) => (
+            <NavLink key={index} to={item.path}>
+              {item.title}
+            </NavLink>
+          ))}
             </nav>
         </div>
       </header>
+      <hr />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header; 
+
