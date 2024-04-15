@@ -1,0 +1,59 @@
+
+.about img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 120px;
+    margin-top: 5%;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+  }
+  
+  .about img.visible {
+    opacity: 1;
+  }
+
+  .about .container {
+    margin-bottom: 5%;
+  }
+  
+  .about-me {
+    max-width: 1390px;
+    margin: 0 auto;
+    display: flex;
+
+  }
+
+.one {
+    padding-bottom: 50px;
+    background-color: rgb(34, 34, 34);
+    padding-top: 30px;
+}
+
+
+.two {
+    padding-top: 50px;
+    background-color: rgb(71, 0, 0);
+}
+
+.left-block {
+  width: 50%;
+}
+
+.left-block iframe{
+    width: 25vw;
+}
+
+.right-block iframe{
+    width: 25vw;
+}
+
+.left-block p {
+    width: 25vw;
+    font-size: 18px;
+}  
+
+.right-block p {
+    width: 25vw;
+    font-size: 20px;
+}  
