@@ -1,88 +1,61 @@
 import React, { useState } from 'react';
-import './portfolio.css'; // Импорт стилей для компонента
-import batSignalImage from '../../images/bat-sginal.jpg'; // Импорт изображений
-import pukImage from '../../images/puk.png';
-import batarangImage from '../../images/glaza.jpg';
+import './portfolio.css'; 
+
 
 const Portfolio = () => {
-  const [showBatSignal, setShowBatSignal] = useState(false);
-  const [showPuk, setShowPuk] = useState(false);
-  const [showBatarang, setShowBatarang] = useState(false);
-
-  const handleButtonClick = () => {
-    setShowBatSignal(true);
-
-    setTimeout(() => {
-      setShowPuk(true);
-
-      setTimeout(() => {
-        setShowBatarang(true);
-
-        setTimeout(() => {
-          setShowBatSignal(false);
-          setShowPuk(false);
-        }, 2000); 
-      }, 2000);
-    }, 2000);
-  };
-
   return (
-    <div className='portfolio'>
+
+    <div className="portfol">
+
+      <img  src={require('../../images/gifka.gif')} alt=""className='gifka' />
+      <img  src={require('../../images/glaza.jpg')} alt="glaza"className='glaza' />
       <div className="container">
-        <button className='bat-button' onClick={handleButtonClick}>
-          Бет Сигнал
-        </button>
-        {/* Изображение "Bat Signal" */}
-        <img
-          src={batSignalImage}
-          alt="Bat Signal"
-          className={`bat-signal ${showBatSignal ? 'visible' : ''}`}
-          style={{
-            transition: 'opacity 0.5s ease',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            opacity: showBatSignal ? 1 : 0,
-            visibility: showBatSignal ? 'visible' : 'hidden'
-          }}
-        />
+      <h2>Опыт работы</h2>
 
-        {/* Изображение "Puk" */}
-        <img
-          src={pukImage}
-          alt="Puk"
-          className={`puk ${showPuk ? 'visible' : ''}`}
-          style={{
-            transition: 'opacity 0.5s ease',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            opacity: showPuk ? 1 : 0,
-            visibility: showPuk ? 'visible' : 'hidden'
-          }}
-        />
+<h3>Готэмская полиция</h3>
+<p><strong>Позиция:</strong> Маскированный борец с преступностью</p>
+<p><strong>Обязанности:</strong></p>
+<ul>
+    <li>Борьба с организованной преступностью в Готэме</li>
+    <li>Расследование преступлений и арест преступников</li>
+    <li>Обеспечение безопасности города</li>
+</ul>
+<p><strong>Навыки и умения:</strong></p>
+<ul>
+    <li>Мастерство боевых искусств, включая карате, джиу-джитсу и бокс</li>
+    <li>Умение работать с современными технологиями и высокотехнологичным снаряжением</li>
+    <li>Опыт в тайном следовании и сборе разведывательной информации</li>
+</ul>
 
-        {/* Изображение "Batarang" */}
-        <img
-          src={batarangImage}
-          alt="Batarang"
-          className={`batarang-white ${showBatarang ? 'visible' : ''}`}
-          style={{
-            transition: 'opacity 0.5s ease',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            opacity: showBatarang ? 1 : 0,
-            visibility: showBatarang ? 'visible' : 'hidden'
-          }}
-        />
-        <h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+<h3>Лига Справедливости</h3>
+<p><strong>Позиция:</strong> Основной стратег и технический эксперт</p>
+<p><strong>Обязанности:</strong></p>
+<ul>
+    <li>Разработка и выполнение планов по борьбе с суперзлодеями</li>
+    <li>Использование высокотехнологичных гаджетов и оружия</li>
+    <li>Сотрудничество с другими супергероями для защиты мира</li>
+</ul>
+<p><strong>Навыки и умения:</strong></p>
+<ul>
+    <li>Высокий уровень интеллекта и стратегического мышления</li>
+    <li>Эксперт в области инженерии и разработки новых технологий</li>
+    <li>Опыт управления сложными миссиями и координации команды супергероев</li>
+</ul>
+
+<h2>Хобби Бэтмена</h2>
+<ul>
+    <li>Тренировки боевых искусств</li>
+    <li>Изучение новейших технологий</li>
+    <li>Развитие стратегического мышления</li>
+</ul>
+
+<h2>Прошлая работа</h2>
+<p>Бэтмен — исключительно деликатная позиция, так что прошлого опыта у него в обычном понимании работы нет.</p>
       </div>
     </div>
+
   );
 };
 
 export default Portfolio;
+
