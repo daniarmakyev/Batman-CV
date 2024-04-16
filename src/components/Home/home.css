@@ -1,4 +1,54 @@
 .title{
-    font-family: ;
-    font-weight: 300;
+    margin-top: 5%;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 92px;
+    margin-left: 80px;
+    max-width: 50%;
+    line-height: 100px;
+}
+
+.home {
+    position: relative;
+}
+
+.desc {
+    margin-left: 80px;
+    max-height: 50px;
+    margin-top: 5px;
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+    overflow: hidden; 
+    border-right: 2px solid white; 
+    white-space: nowrap; 
+    animation: cursor 0.75s step-end infinite, printed_text 7s steps(60) forwards; 
+}
+
+@keyframes cursor {
+    0% {
+        border-color: white;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: white;
+    }
+}
+
+@keyframes printed_text {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%; 
+    }
+}
+
+  
+
+.home .container img {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

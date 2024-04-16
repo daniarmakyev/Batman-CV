@@ -1,0 +1,38 @@
+.portfol {
+    margin-top: 30px;
+    font-size: +18px;
+    padding-top: 100px;
+}
+
+.gifka {
+    opacity: 1;
+    position: absolute;
+    top: 150px;
+    max-width: 150px;
+    left: -100%;
+    transform: translateY(-50%);
+    animation: slideRight 3s linear infinite;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.portfol .gifka:hover {
+    animation-play-state: paused;
+}
+
+
+.glaza {
+    max-width: 300px;
+    position: absolute;
+    right: 30%;
+    top: 10%;
+}
+
+@keyframes slideRight {
+    0% {
+        left: -100%; /* Начальное положение за пределами экрана слева */
+    }
+    100% {
+        left: 100%; /* Конечное положение за пределами экрана справа */
+    }
+}

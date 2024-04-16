@@ -10,7 +10,7 @@ const Header = () => {
       <header>
         <div className="container">
           <div className="logo">
-            <img src={require('../../images/logo.png')} alt="Logo" />
+            <Link to='/' path="/"><img  src={require('../../images/logo.png')} alt="Logo" /></Link>
           </div>
             <nav className="nav">
             {navs.map((item, index) => (
