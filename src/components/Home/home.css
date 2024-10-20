@@ -3,17 +3,13 @@
     font-family: "Oswald", sans-serif;
     font-weight: 500;
     font-size: 92px;
-    margin-left: 80px;
     max-width: 50%;
     line-height: 100px;
-}
-
-.home {
-    position: relative;
+    text-wrap: wrap;
 }
 
 .desc {
-    margin-left: 80px;
+
     max-height: 50px;
     margin-top: 5px;
     font-family: "Oswald", sans-serif;
@@ -22,6 +18,7 @@
     border-right: 2px solid white; 
     white-space: nowrap; 
     animation: cursor 0.75s step-end infinite, printed_text 7s steps(60) forwards; 
+
 }
 
 @keyframes cursor {
@@ -45,10 +42,21 @@
     }
 }
 
-  
-
-.home .container img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.container2 {
+    display: flex;
+    align-items: flex-start; 
 }
+
+.homeImg {
+    width: 300px; 
+    height: auto; 
+    flex-shrink: 0;
+    margin-left: -200px;
+}
+
+/* @media screen and (min-width:1550px) {
+
+   .homeImg {
+    left: -200px;
+   }
+  } */
